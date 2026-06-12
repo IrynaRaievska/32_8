@@ -15,7 +15,7 @@ local func;
 func := Concatenation("Endom32_8mult_",String(x),"_",String(y),"_v");
 return func;end;
 MT:=[];
-for i1 in [4..k1] do
+for i1 in [1..k1] do
 LogTo(fn(i1));
 Print("\n","The CASE i1=", i1," ","started","\n");
 MT2:=[];
