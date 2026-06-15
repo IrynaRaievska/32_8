@@ -8,22 +8,22 @@ Pp:=Image(is,P);
 Ccs:=ConjugacyClassesSubgroups(Au);;
 Sub:=[];
 for x in Ccs do
-d:=Representative(x);
-Add(Sub,d);
+  d:=Representative(x);
+  Add(Sub,d);
 od;
 Su:=Filtered(Sub,x->Size(x)=16);;
 Mul:=[];
 for x in Su do
-c:=PreImage(is,x);
-Add(Mul,c);
+  c:=PreImage(is,x);
+  Add(Mul,c);
 od;
 U0:=Filtered(Mul,x->Maximum(OrbitLengths(x,G))=16);;
 U:=[];
 for x in U0 do
-xp:=Image(is,x);
-d:=ConjugacyClassSubgroups(Au,xp);
-c:=Filtered(d,y->Size(Intersection(Pp,y))=16);
-Add(U,PreImage(is,c[1]));
+  xp:=Image(is,x);
+  d:=ConjugacyClassSubgroups(Au,xp);
+  c:=Filtered(d,y->Size(Intersection(Pp,y))=16);
+  Add(U,PreImage(is,c[1]));
 od;
 Mult:=AsSet(List(U,IdGroup));;
 k1:=Size(Mult);
@@ -52,13 +52,13 @@ ne:=Size(En);
 Print("Size(En)=",ne,"\n");
 N:=[];
 for i in [1..ne] do
-gens:=[];
-for y in gen do
-Add(gens,y^En[i]);
-od;
-d:=GroupHomomorphismByImages(G,G,gen,gens);
-Add(N,d);
-En[i]:=[];
+  gens:=[];
+  for y in gen do
+    Add(gens,y^En[i]);
+  od;
+  d:=GroupHomomorphismByImages(G,G,gen,gens);
+  Add(N,d);
+  En[i]:=[];
 od;
 En:=[];
 N:=Filtered(N,x->x^5=o);;

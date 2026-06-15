@@ -50,5 +50,9 @@ for i1 in [1..k1] do
   i3:=IdGroup(A)[1];
   i4:=IdGroup(A)[2];
   LogTo();
-  Read("FormEndom_32.txt");
+  if Size(MT)>0 then
+    Read("FormEndom_32.txt");
+  else
+    Print("there is no local nearring");
+  fi;
 od;

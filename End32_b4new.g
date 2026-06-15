@@ -4,7 +4,7 @@ r:=Minimum(List(Co,Size));
 Print("\n","r=",r,"\n");
 Y:=[];
 for i in [1..r-1] do
-Y[i]:=[];
+  Y[i]:=[];
 od;
 VV:=[];
 VV[1]:=Filtered(V1,x->Size(x)=1);;
@@ -18,5 +18,5 @@ t3:=Size(VV[3]);
 t4:=Size(VV[4]);
 t5:=Size(VV[5]);
 for j in [r..l] do
-Read("End32_comb_new.g");
+  Read("End32_comb_new.g");
 od;

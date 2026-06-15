@@ -6,8 +6,8 @@ Print("\n ","G:=SmallGroup(32,8);","\n");
 Print("\n ");
 Print("P:=[",P[1]);
 for i in [2..s] do
-d:=P[i];
-Print(",", d);
+  d:=P[i];
+  Print(",", d);
 od;
 Print("];");
 Print("\n ");

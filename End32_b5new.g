@@ -8,9 +8,9 @@ N2:=[];
 repeat
 M:=[];
 for x in St do
-d:=OnSets(N1[1],x);
-Add(M,d);
-M:=Unique(M);
+  d:=OnSets(N1[1],x);
+  Add(M,d);
+  M:=Unique(M);
 od;
 N1:=Difference(N1,M);
 Add(N2,M[1]);
